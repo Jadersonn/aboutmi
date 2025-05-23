@@ -1,0 +1,25 @@
+title: Jaderson Pillar
+description: Desenvolvedor Full Stack | Desenvolvedor Back end | Desenvolvedor Web | Analista de Dados | Analista de Sistemas
+site_title: 'Jaderson Pillar'
+
+# Build settings
+markdown: kramdown
+exclude: [vendor/ruby]
+
+# Personalization
+github_username: jadersonn
+blog_url: https://www.linkedin.com/in/jaderson-pillar/
+email: pillar.jaderson@gmail.com
+linkedin_username: jaderson-pillar
+
+# Social media links  
+#reddit_username: jadersonPillar
+facebook_username: jadersonPillar
+instagram_username: jadersonPillar
+twitter_username: jaderson610
+
+# absolute or relative
+profile_picture: assets/images/imagemPrincipal.jpeg
+
+# Google Analytics ID
+google_analytics: G-FRBLE9LSLS
