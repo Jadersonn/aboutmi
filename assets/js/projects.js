@@ -11,13 +11,13 @@ let render_projects = (slug) => {
 
     let projects_obj = [
         {
-            image: 'assets/images/LOGIN.PNG',
+            image: 'assets/images/login-funcional.png',
             link: 'https://github.com/Jadersonn/AppCertificadosLaravel',
             title: 'AppCertificadosLaravel',
             demo: 'https://github.com/Jadersonn/AppCertificadosLaravel',
             technologies: ['Laravel', 'PHP', 'MySQL'],
             description: "A web application for generating and managing certificates. Built with Laravel, it allows users to create, issue, and track certificates efficiently.",
-            categories: ['webdev','desenvolvimento']
+            categories: ['desenvolvimento','laravel']
         }
     ]
 
