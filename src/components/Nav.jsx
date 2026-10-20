@@ -1,15 +1,20 @@
 import { site, asset } from '../data/site.js'
+import { useLanguage } from '../i18n/LanguageContext.jsx'
+import LanguageSwitcher from './LanguageSwitcher.jsx'
 
 const links = [
-  { href: '#about', label: 'SOBRE' },
-  { href: '#skills', label: 'HABILIDADES' },
-  { href: '#projects', label: 'PROJETO' },
-  { href: '#extra', label: 'CONTATO' },
+  { href: '#about', key: 'nav.about' },
+  { href: '#skills', key: 'nav.skills' },
+  { href: '#projects', key: 'nav.projects' },
+  { href: '#extra', key: 'nav.contact' },
 ]
 
 export default function Nav() {
+  const { t } = useLanguage()
+
   return (
     <section className="head" id="nav">
+      <LanguageSwitcher />
       <div className="head-inner-wrap">
         <div className="profile-pic-div animated">
           <a href="#about" className="profile-pic-link">
@@ -21,7 +26,7 @@ export default function Nav() {
         <div className="head-menu-wrap">
           {links.map((link) => (
             <a key={link.href} className="semi-transparent-button with-border nav-links" href={link.href}>
-              {link.label}
+              {t(link.key)}
             </a>
           ))}
         </div>

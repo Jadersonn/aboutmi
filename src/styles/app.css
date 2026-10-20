@@ -53,3 +53,39 @@ body {
   margin: 0;
   white-space: nowrap;
 }
+
+/* Seletor de idioma: texto simples no canto superior direito do cabeçalho */
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  display: flex;
+  z-index: 1;
+}
+
+.language-switcher button {
+  font: inherit;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.55);
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.language-switcher button + button::before {
+  content: '·';
+  margin: 0 8px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.language-switcher button:hover,
+.language-switcher button.active {
+  color: #fff;
+}
+
+.language-switcher button.active {
+  font-weight: bold;
+}

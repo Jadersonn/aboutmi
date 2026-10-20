@@ -1,4 +1,5 @@
 import { site, asset } from '../data/site.js'
+import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 const socials = [
   { href: `mailto:${site.email}`, label: 'Email', icon: 'fas fa-envelope' },
@@ -10,11 +11,13 @@ const socials = [
 ]
 
 export default function Contact() {
+  const { t } = useLanguage()
+
   return (
     <div className="section-wrapper">
       <section className="section extra" id="extra">
         <div>
-          <div className="section-heading" id="chat-text">Contato</div>
+          <div className="section-heading" id="chat-text">{t('headings.contact')}</div>
 
           <p className="paragraph-text justify-text">
             Vamos conversar? Estou aberto a <strong>oportunidades de trabalho</strong>,{' '}

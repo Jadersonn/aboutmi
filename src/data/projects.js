@@ -3,11 +3,26 @@ import { studyCards } from './studies.js'
 import { ideaCards } from './ideas.js'
 
 export const categories = [
-  { slug: 'concluidos', label: 'Projetos Concluídos' },
-  { slug: 'desenvolvimento', label: 'Projetos em Desenvolvimento' },
-  { slug: 'naoImplementadas', label: 'Ideias não implementadas' },
-  { slug: 'proxEstudos', label: 'Próximos Estudos' },
-  { slug: 'certificacoes', label: 'Certificações' },
+  {
+    slug: 'concluidos',
+    label: { pt: 'Projetos Concluídos', en: 'Completed Projects', es: 'Proyectos Concluidos' },
+  },
+  {
+    slug: 'desenvolvimento',
+    label: { pt: 'Projetos em Desenvolvimento', en: 'Projects in Progress', es: 'Proyectos en Desarrollo' },
+  },
+  {
+    slug: 'naoImplementadas',
+    label: { pt: 'Ideias não implementadas', en: 'Unbuilt Ideas', es: 'Ideas no implementadas' },
+  },
+  {
+    slug: 'proxEstudos',
+    label: { pt: 'Próximos Estudos', en: 'Next Studies', es: 'Próximos Estudios' },
+  },
+  {
+    slug: 'certificacoes',
+    label: { pt: 'Certificações', en: 'Certifications', es: 'Certificaciones' },
+  },
 ]
 
 export const projects = [

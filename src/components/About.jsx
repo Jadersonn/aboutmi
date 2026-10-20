@@ -1,11 +1,14 @@
 import { site } from '../data/site.js'
+import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 export default function About() {
+  const { t } = useLanguage()
+
   return (
     <div className="section-wrapper">
       <section className="section about" id="about">
         <div id="about-text">
-          <div className="section-heading">Sobre</div>
+          <div className="section-heading">{t('headings.about')}</div>
 
           <p className="paragraph-text justify-text">
             Sou <strong>Jaderson da Silva Pillar Martins</strong>, desenvolvedor de software com forte atuação em{' '}

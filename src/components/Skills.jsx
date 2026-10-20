@@ -1,12 +1,15 @@
 import { skillGroups } from '../data/skills.js'
 import SkillBar from './SkillBar.jsx'
+import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 export default function Skills() {
+  const { t } = useLanguage()
+
   return (
     <div className="section-wrapper">
       <section className="section skills" id="skills">
         <div>
-          <div className="section-heading" id="skills-text">Habilidades</div>
+          <div className="section-heading" id="skills-text">{t('headings.skills')}</div>
 
           <div className="skills-grid">
             <div className="what-i-do">
