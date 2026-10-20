@@ -23,9 +23,9 @@ Abra http://localhost:5173/aboutmi/. Cada vez que você salva um arquivo, a pág
 | Aba **Certificações** | `src/data/certificates.js` |
 | Nomes das abas | `src/data/projects.js` (lista `categories`) |
 | Barras de **Habilidades** | `src/data/skills.js` |
-| Nome, título, e-mail, telefone, redes sociais, currículo | `src/data/site.js` |
-| Texto da seção **Sobre** | `src/components/About.jsx` |
-| Texto da seção **Contato** | `src/components/Contact.jsx` |
+| Nome, foto, e-mail, telefone, redes sociais | `src/data/site.js` |
+| Subtítulo do cabeçalho, textos de **Sobre**, **Contato** e resumo de **Habilidades**, currículo de cada idioma | `src/i18n/pt.jsx`, `en.jsx`, `es.jsx` |
+| Menu, títulos das seções e outros textos curtos da interface | `src/i18n/pt.jsx`, `en.jsx`, `es.jsx` |
 
 ## Regras gerais (valem para todos os arquivos)
 
@@ -35,6 +35,27 @@ Abra http://localhost:5173/aboutmi/. Cada vez que você salva um arquivo, a pág
 - Para **excluir** um item, apague o bloco inteiro, do `{` até o `},`.
 - Para **modificar**, troque só o texto entre as aspas.
 - Se a página ficar em branco depois de salvar, olhe o terminal do `npm run dev`: ele mostra a linha com erro (quase sempre uma vírgula ou aspa faltando).
+
+## Idiomas (PT, EN, ES)
+
+O site tem três idiomas, escolhidos pelo seletor no canto do cabeçalho.
+
+**Nos cards e dados** (`src/data/`), qualquer texto pode ser escrito de dois jeitos:
+
+```js
+title: 'Power BI',                                   // igual em todos os idiomas
+title: { pt: 'Próximos Estudos', en: 'Next Studies', es: 'Próximos Estudios' },  // um por idioma
+```
+
+- Se faltar `en` ou `es`, o site mostra o **português**. Então dá para adicionar um item só em PT e traduzir depois.
+- Nomes próprios e tecnologias (`'Laravel'`, `'Cisco Networking Academy'`) não precisam de tradução.
+
+**Textos da interface e textos longos** ficam em um arquivo por idioma: `src/i18n/pt.jsx`, `en.jsx` e `es.jsx`.
+
+- Os três arquivos têm as **mesmas chaves** (`nav`, `headings`, `about`, `contact`...). Ao mudar um texto, mude nos três.
+- O **Sobre** e as frases do **Contato** estão em JSX: use `<strong>...</strong>` para negrito e `<p className="paragraph-text justify-text">...</p>` para um novo parágrafo, copiando os que já existem.
+- Se uma chave faltar em `en.jsx` ou `es.jsx`, o site usa a de `pt.jsx`.
+- O currículo de cada idioma fica na chave `resume`, no fim de cada arquivo.
 
 ---
 
@@ -47,7 +68,11 @@ Abra http://localhost:5173/aboutmi/. Cada vez que você salva um arquivo, a pág
   title: 'Meu Projeto',
   demo: 'https://meu-projeto.com',                 // opcional
   technologies: ['Laravel', 'PHP', 'MySQL'],
-  description: 'O que o projeto faz, em uma ou duas frases.',
+  description: {
+    pt: 'O que o projeto faz, em uma ou duas frases.',
+    en: 'What the project does, in one or two sentences.',
+    es: 'Qué hace el proyecto, en una o dos frases.',
+  },
   categories: ['concluidos'],
 },
 ```
@@ -61,8 +86,12 @@ Abra http://localhost:5173/aboutmi/. Cada vez que você salva um arquivo, a pág
 
 ```js
 {
-  title: 'Nome da Ideia',
-  description: 'Qual problema resolve, para quem e como funciona.',
+  title: { pt: 'Nome da Ideia', en: 'Idea Name', es: 'Nombre de la Idea' },
+  description: {
+    pt: 'Qual problema resolve, para quem e como funciona.',
+    en: 'What problem it solves, for whom and how it works.',
+    es: 'Qué problema resuelve, para quién y cómo funciona.',
+  },
   technologies: ['Flutter', 'Spring Boot'],
 },
 ```
@@ -74,14 +103,18 @@ Abra http://localhost:5173/aboutmi/. Cada vez que você salva um arquivo, a pág
 
 ```js
 {
-  title: 'Nome do Estudo',
-  status: 'Em andamento',
-  description: 'O que vou estudar e por que isso importa para a minha carreira.',
+  title: { pt: 'Nome do Estudo', en: 'Study Name', es: 'Nombre del Estudio' },
+  status: 'inProgress',
+  description: {
+    pt: 'O que vou estudar e por que isso importa para a minha carreira.',
+    en: 'What I will study and why it matters for my career.',
+    es: 'Qué voy a estudiar y por qué importa para mi carrera.',
+  },
   technologies: ['Tecnologia 1', 'Tecnologia 2'],
 },
 ```
 
-- **`status`** vira a primeira etiqueta do card. Use `'Em andamento'`, `'Recomendado'` ou outro texto curto, como `'Concluído'`.
+- **`status`** vira a primeira etiqueta do card, já traduzida. Use `'inProgress'` (Em andamento), `'recommended'` (Recomendado) ou `'done'` (Concluído).
 - Deixe os itens **em andamento no topo** do arquivo.
 - **Quando concluir um estudo e receber o certificado**: apague o bloco daqui e adicione o certificado (seção abaixo).
 
@@ -105,15 +138,19 @@ Depois adicione o bloco:
 ```js
 {
   file: 'nome-do-arquivo',        // sem .pdf / .jpg
-  title: 'Nome do Curso',
-  summary: 'Descrição breve do que o curso aborda.',
-  issuer: 'Nome do Emissor',
-  date: 'mês/ano',                // ex.: 'abr/2025'
+  title: 'Nome do Curso',         // ou { pt, en, es }
+  summary: {
+    pt: 'Descrição breve do que o curso aborda.',
+    en: 'Short description of what the course covers.',
+    es: 'Descripción breve de lo que aborda el curso.',
+  },
+  issuer: 'Nome do Emissor',      // ou { pt, en, es }
+  date: '2025-04',                // ano-mês; o site mostra "abr/2025", "Apr/2025"...
   hours: 40,                      // só o número, sem "h" e sem aspas
 },
 ```
 
-- A descrição final é montada sozinha: `summary` + **"Emitido por: (issuer), (hours)h."**
+- A descrição final é montada sozinha: `summary` + **"Emitido por: (issuer), (hours)h."** (em inglês, "Issued by").
 - Os cards se **ordenam sozinhos pela carga horária** (maior primeiro), então a posição do bloco no arquivo não importa.
 - **Excluir**: apague o bloco e também os dois arquivos (PDF e JPG).
 
@@ -125,12 +162,16 @@ Depois adicione o bloco:
 
 - Coloque dentro do grupo certo (`Banco de Dados`, `Linguagens`, `FRAMEWORKS`...). `percent` vai de 0 a 100.
 - Para destacar uma barra em vermelho, acrescente `color: RED`, como no Laravel.
-- Para criar um grupo novo, copie um bloco `{ title: '...', skills: [ ... ] },` inteiro.
+- Para criar um grupo novo, copie um bloco `{ title: { pt: '...', en: '...', es: '...' }, skills: [ ... ] },` inteiro.
+- O texto do **Sumário**, ao lado das barras, fica em `src/i18n/<idioma>.jsx`, na chave `skills.summary`.
 
 ## Abas (categorias) — `src/data/projects.js`
 
 ```js
-{ slug: 'certificacoes', label: 'Certificações' },
+{
+  slug: 'certificacoes',
+  label: { pt: 'Certificações', en: 'Certifications', es: 'Certificaciones' },
+},
 ```
 
 - **`label`** é o texto do botão; pode mudar à vontade.
