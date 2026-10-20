@@ -19,20 +19,16 @@ export default function Contact() {
         <div>
           <div className="section-heading" id="chat-text">{t('headings.contact')}</div>
 
-          <p className="paragraph-text justify-text">
-            Vamos conversar? Estou aberto a <strong>oportunidades de trabalho</strong>,{' '}
-            <strong>projetos freelance</strong>, colaborações em <strong>open source</strong> ou simplesmente trocar
-            uma ideia sobre <strong>tecnologia</strong>, <strong>carreira</strong> ou o que mais fizer sentido.
-          </p>
+          <p className="paragraph-text justify-text">{t('contact.intro')}</p>
 
           <p className="paragraph-text justify-text">
             💌 E-mail: <a href={`mailto:${site.email}`}>{site.email}</a>
             <br />
-            📱 Tel: {site.phone}
+            📱 {t('contact.phone')}: {site.phone}
             <br />
-            ⏳ Respondo em até 24 horas.
+            ⏳ {t('contact.reply')}
             <br />
-            🔗 Redes:{' '}
+            🔗 {t('contact.networks')}:{' '}
             <a href={site.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
             </a>{' '}
@@ -43,20 +39,17 @@ export default function Contact() {
           </p>
 
           <p className="paragraph-text justify-text">
-            📄 Currículo:{' '}
-            <a href={asset(site.resumePdf)} target="_blank" rel="noreferrer">
+            📄 {t('contact.resume')}:{' '}
+            <a href={asset(t('resume.pdf'))} target="_blank" rel="noreferrer">
               PDF
             </a>{' '}
             |{' '}
-            <a href={asset(site.resumeDoc)} target="_blank" rel="noreferrer">
+            <a href={asset(t('resume.doc'))} target="_blank" rel="noreferrer">
               DOC
             </a>
           </p>
 
-          <p className="paragraph-text justify-text">
-            Seja para <strong>projetos</strong>, <strong>parcerias</strong> ou uma boa conversa, estou por aqui. Bora
-            construir algo?🚀
-          </p>
+          <p className="paragraph-text justify-text">{t('contact.outro')}</p>
 
           <div className="extra-links">
             {socials.map(({ href, label, icon }) => (

@@ -22,7 +22,7 @@ export default function Nav() {
           </a>
         </div>
         <div className="head-name head-title animated" id="head-name">{site.title}</div>
-        <div className="head-punchline animated">{site.description}</div>
+        <div className="head-punchline animated">{t('punchline')}</div>
         <div className="head-menu-wrap">
           {links.map((link) => (
             <a key={link.href} className="semi-transparent-button with-border nav-links" href={link.href}>

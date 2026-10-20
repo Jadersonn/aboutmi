@@ -3,7 +3,8 @@ import SkillBar from './SkillBar.jsx'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 export default function Skills() {
-  const { t } = useLanguage()
+  const { t, pick } = useLanguage()
+  const [architecture, languagesText, frameworks, closing] = t('skills.summary')
 
   return (
     <div className="section-wrapper">
@@ -13,27 +14,24 @@ export default function Skills() {
 
           <div className="skills-grid">
             <div className="what-i-do">
-              <h3 className="center-align skills-subsection">Sumário</h3>
+              <h3 className="center-align skills-subsection">{t('skills.summaryTitle')}</h3>
+              {/* As quebras de linha alinham cada trecho com o grupo de barras ao lado */}
               <p className="paragraph-text center-align">
                 <br />
-                Proficiência em MVC e DDD para arquitetura de software, e domínio em MySQL e PostgreSQL para gestão de
-                bancos de dados.
+                {architecture}
                 <br /><br /><br /><br /><br /><br />
-                Expertise em JAVA, PHP e PYTHON, além de familiaridade com C++.
+                {languagesText}
                 <br /><br /><br /><br /><br />
-                Ampla experiência com JOOMLA, Spring Boot, Spring, Bootstrap e Hibernate, com um nível de proficiência
-                excepcional no framework LARAVEL. Também possuo conhecimento em FLUTTER para desenvolvimento
-                multiplataforma.
+                {frameworks}
                 <br /><br />
-                Com esta combinação de competências, estou pronto para enfrentar desafios complexos e entregar projetos
-                de alta qualidade.
+                {closing}
               </p>
             </div>
 
             <div className="skills">
               {skillGroups.map((group) => (
-                <div key={group.title} className="progress-bars">
-                  <h3 className="center-align skills-subsection">{group.title}</h3>
+                <div key={group.title.pt ?? group.title} className="progress-bars">
+                  <h3 className="center-align skills-subsection">{pick(group.title)}</h3>
                   {group.skills.map((skill) => (
                     <SkillBar key={skill.name} {...skill} />
                   ))}
