@@ -42,10 +42,6 @@ export default function Contact() {
             📄 {t('contact.resume')}:{' '}
             <a href={asset(t('resume.pdf'))} target="_blank" rel="noreferrer">
               PDF
-            </a>{' '}
-            |{' '}
-            <a href={asset(t('resume.doc'))} target="_blank" rel="noreferrer">
-              DOC
             </a>
           </p>
 

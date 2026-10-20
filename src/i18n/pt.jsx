@@ -102,5 +102,5 @@ export default {
   },
 
   // Currículo mostrado no Contato
-  resume: { pdf: 'assets/docs/curriculo - pt.pdf', doc: 'assets/docs/curriculo - pt.docx' },
+  resume: { pdf: 'assets/docs/CV-Jaderson.pdf' },
 }

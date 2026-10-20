@@ -100,6 +100,6 @@ export default {
     ),
   },
 
-  // Todavía no hay currículum en español: se usa el PDF en inglés y el DOC en portugués
-  resume: { pdf: 'assets/docs/curriculo - en.pdf', doc: 'assets/docs/curriculo - pt.docx' },
+  // Currículum enlazado en la sección de Contacto
+  resume: { pdf: 'assets/docs/CV-Jaderson-es.pdf' },
 }

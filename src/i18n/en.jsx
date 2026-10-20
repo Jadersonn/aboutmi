@@ -98,6 +98,6 @@ export default {
     ),
   },
 
-  // There is no English .docx yet, so the DOC link uses the Portuguese one
-  resume: { pdf: 'assets/docs/curriculo - en.pdf', doc: 'assets/docs/curriculo - pt.docx' },
+  // Resume linked in the Contact section
+  resume: { pdf: 'assets/docs/CV-Jaderson-en.pdf' },
 }
