@@ -4,3 +4,11 @@ dist
 
 # Playwright CLI output (may contain credentials)
 .playwright-cli/
+
+# Cópia duplicada do projeto criada ao mudar a pasta da sessão
+/aboutmi/
+
+# Ferramentas locais de IA (skills, configurações do Claude)
+.agents/
+.claude/
+skills-lock.json
