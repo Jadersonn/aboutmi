@@ -32,8 +32,11 @@ export const projects = [
     title: 'AppCertificadosLaravel',
     demo: 'https://github.com/Jadersonn/AppCertificadosLaravel',
     technologies: ['Laravel', 'PHP', 'MySQL'],
-    description:
-      'A web application for generating and managing certificates. Built with Laravel, it allows users to create, issue, and track certificates efficiently.',
+    description: {
+      pt: 'Aplicação web para gerar e gerenciar certificados. Feita em Laravel, permite criar, emitir e acompanhar certificados de forma eficiente.',
+      en: 'A web application for generating and managing certificates. Built with Laravel, it allows users to create, issue, and track certificates efficiently.',
+      es: 'Aplicación web para generar y gestionar certificados. Hecha con Laravel, permite crear, emitir y dar seguimiento a certificados de forma eficiente.',
+    },
     categories: ['concluidos', 'laravel'],
   },
   ...ideaCards,

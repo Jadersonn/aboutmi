@@ -5,4 +5,7 @@ export default {
   nav: { about: 'SOBRE', skills: 'HABILIDADES', projects: 'PROJETOS', contact: 'CONTATO' },
   headings: { about: 'Sobre', skills: 'Habilidades', projects: 'Projetos', contact: 'Contato' },
   projects: { empty: 'Nada por aqui ainda.' },
+  months: ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'],
+  certificates: { issuedBy: 'Emitido por' },
+  studies: { status: { inProgress: 'Em andamento', recommended: 'Recomendado', done: 'Concluído' } },
 }

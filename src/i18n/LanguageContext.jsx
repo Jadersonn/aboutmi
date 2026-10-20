@@ -27,6 +27,16 @@ function initialLanguage() {
 // Busca 'a.b.c' dentro do dicionário
 const lookup = (dict, key) => key.split('.').reduce((value, part) => value?.[part], dict)
 
+const isTranslated = (field) => field && typeof field === 'object' && !Array.isArray(field) && 'pt' in field
+
+// Versão de um campo ({ pt, en, es } ou texto simples) em um idioma, com o português de reserva
+export const pickIn = (field, code) => (isTranslated(field) ? field[code] ?? field.pt : field)
+
+// Monta um campo { pt, en, es } chamando fn(código, dicionário) para cada idioma.
+// Usado nos arquivos de dados para textos que dependem do dicionário (ex.: "Emitido por").
+export const translateAll = (fn) =>
+  Object.fromEntries(Object.entries(dictionaries).map(([code, dict]) => [code, fn(code, dict)]))
+
 const LanguageContext = createContext(null)
 
 export function LanguageProvider({ children }) {
@@ -48,7 +58,7 @@ export function LanguageProvider({ children }) {
       // Texto da interface; cai para o português se faltar a tradução
       t: (key) => lookup(dictionaries[lang], key) ?? lookup(pt, key) ?? key,
       // Campo de conteúdo: texto simples ou { pt, en, es }
-      pick: (field) => (field && typeof field === 'object' && !Array.isArray(field) && 'pt' in field ? field[lang] ?? field.pt : field),
+      pick: (field) => pickIn(field, lang),
     }),
     [lang],
   )
