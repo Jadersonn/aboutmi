@@ -14,7 +14,8 @@ npm run dev
 ## Estrutura
 
 - `src/components/` — seções da página (Nav, Sobre, Habilidades, Projetos, Contato, Rodapé)
-- `src/data/` — conteúdo editável: dados pessoais (`site.js`), habilidades (`skills.js`) e projetos (`projects.js`)
+- `src/data/` — conteúdo editável: dados pessoais, habilidades, projetos, ideias, estudos e certificados
+- `docs/COMO-EDITAR.md` — passo a passo para adicionar, modificar e excluir itens do site
 - `public/assets/` — imagens e currículos servidos como estão
 
 ## Deploy
