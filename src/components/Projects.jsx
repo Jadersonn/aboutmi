@@ -3,7 +3,7 @@ import { categories, projects } from '../data/projects.js'
 import ProjectCard from './ProjectCard.jsx'
 
 export default function Projects() {
-  const [selected, setSelected] = useState('desenvolvimento')
+  const [selected, setSelected] = useState('concluidos')
   const visible = projects.filter((project) => project.categories.includes(selected))
 
   return (
