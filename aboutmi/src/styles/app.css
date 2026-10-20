@@ -1,0 +1,38 @@
+/* Substitui o jQuery smoothScroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Substitui a animação do jQuery nas barras de habilidade */
+.skillbar-bar {
+  transition: width 1s ease;
+}
+
+.projects-wrapper.fade-in {
+  animation: projects-fade-in 0.4s;
+}
+
+@keyframes projects-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.projects-empty {
+  width: 100%;
+  text-align: center;
+}
+
+/* As abas de projetos agora são <button> em vez de <a> */
+button.semi-transparent-button {
+  font: inherit;
+  background: transparent;
+}
+button.semi-transparent-button.white-button-hover,
+button.semi-transparent-button:hover {
+  background: #222;
+}
+
+/* O layout original contava com o fundo branco padrão do navegador */
+body {
+  background: #fff;
+}

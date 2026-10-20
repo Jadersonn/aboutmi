@@ -10,7 +10,7 @@ export default function Projects() {
     <div className="section-wrapper">
       <section className="section projects" id="projects">
         <div className="full-width">
-          <div className="section-heading" id="featured-projects-text">Atuações</div>
+          <div className="section-heading" id="featured-projects-text">Projetos</div>
 
           <div className="project-technologies">
             {categories.map(({ slug, label }) => (

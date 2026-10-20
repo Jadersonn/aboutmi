@@ -15,6 +15,6 @@ export const projects = [
     technologies: ['Laravel', 'PHP', 'MySQL'],
     description:
       'A web application for generating and managing certificates. Built with Laravel, it allows users to create, issue, and track certificates efficiently.',
-    categories: ['desenvolvimento', 'laravel'],
+    categories: ['concluidos', 'laravel'],
   },
 ]
