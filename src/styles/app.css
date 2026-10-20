@@ -36,3 +36,20 @@ button.semi-transparent-button:hover {
 body {
   background: #fff;
 }
+
+/* Títulos de cards sem link (ex.: próximos estudos) com a mesma cor dos que têm link */
+.card__article h2 {
+  color: #444;
+}
+
+/* Etiquetas dos cards: uma ao lado da outra, sem quebrar no meio */
+.card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.card__meta .project-technology {
+  margin: 0;
+  white-space: nowrap;
+}

@@ -18,9 +18,8 @@ export default function ProjectCard({ image, link, title, demo, technologies, de
 
         <div className="card__content card__padding">
           <article className="card__article">
-            <h2>
-              <a {...linkProps(link)}>{title}</a>
-            </h2>
+            {/* Itens sem link (ex.: próximos estudos) mostram só o título */}
+            <h2>{link ? <a {...linkProps(link)}>{title}</a> : title}</h2>
             <p className="paragraph-text-normal">
               {description} {demo && <a href={demo}>Demo</a>}
             </p>
