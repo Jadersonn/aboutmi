@@ -1,3 +1,5 @@
+import { certificateCards } from './certificates.js'
+
 export const categories = [
   { slug: 'concluidos', label: 'Projetos Concluídos' },
   { slug: 'desenvolvimento', label: 'Projetos em Desenvolvimento' },
@@ -17,4 +19,5 @@ export const projects = [
       'A web application for generating and managing certificates. Built with Laravel, it allows users to create, issue, and track certificates efficiently.',
     categories: ['concluidos', 'laravel'],
   },
+  ...certificateCards,
 ]

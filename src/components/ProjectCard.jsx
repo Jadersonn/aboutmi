@@ -1,12 +1,16 @@
 import { asset } from '../data/site.js'
 
+// Links locais (ex.: PDFs em public/) precisam do prefixo base e abrem em nova aba
+const linkProps = (link) =>
+  /^https?:/.test(link) ? { href: link } : { href: asset(link), target: '_blank', rel: 'noreferrer' }
+
 export default function ProjectCard({ image, link, title, demo, technologies, description }) {
   return (
     <div className="wrapper">
       <div className="card radius shadowDepth1">
         {image && (
           <div className="card__image border-tlr-radius">
-            <a href={link}>
+            <a {...linkProps(link)}>
               <img src={asset(image)} alt={title} className="border-tlr-radius" />
             </a>
           </div>
@@ -15,7 +19,7 @@ export default function ProjectCard({ image, link, title, demo, technologies, de
         <div className="card__content card__padding">
           <article className="card__article">
             <h2>
-              <a href={link}>{title}</a>
+              <a {...linkProps(link)}>{title}</a>
             </h2>
             <p className="paragraph-text-normal">
               {description} {demo && <a href={demo}>Demo</a>}
