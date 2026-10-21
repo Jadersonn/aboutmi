@@ -16,7 +16,9 @@ export default {
       <p className="paragraph-text justify-text">
         I am <strong>Jaderson da Silva Pillar Martins</strong>, a software developer with a strong focus on{' '}
         <strong>software engineering</strong>, <strong>digital infrastructure</strong> and{' '}
-        <strong>process optimization</strong>. In the <strong>Brazilian Army</strong>, I maintained websites, networks,
+        <strong>process optimization</strong>. I hold a degree in{' '}
+        <strong>Systems Analysis and Development (ADS)</strong> from the{' '}
+        <strong>Federal Institute of Mato Grosso do Sul (IFMS)</strong>. In the <strong>Brazilian Army</strong>, I maintained websites, networks,
         servers and databases.
       </p>
       <p className="paragraph-text justify-text">

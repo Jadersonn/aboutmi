@@ -18,7 +18,9 @@ export default {
       <p className="paragraph-text justify-text">
         Sou <strong>Jaderson da Silva Pillar Martins</strong>, desenvolvedor de software com forte atuação em{' '}
         <strong>engenharia de software</strong>, <strong>infraestrutura digital</strong> e{' '}
-        <strong>otimização de processos</strong>. Atuei no <strong>Exército Brasileiro</strong> na manutenção de
+        <strong>otimização de processos</strong>. Sou formado em{' '}
+        <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> pelo{' '}
+        <strong>Instituto Federal de Mato Grosso do Sul (IFMS)</strong>. Atuei no <strong>Exército Brasileiro</strong> na manutenção de
         páginas web, redes, servidores e bancos de dados.
       </p>
       <p className="paragraph-text justify-text">
