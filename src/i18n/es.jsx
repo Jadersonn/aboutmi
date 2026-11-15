@@ -90,7 +90,7 @@ export default {
         <strong>carrera</strong> o lo que tenga sentido.
       </>
     ),
-    phone: 'Tel',
+    whatsapp: 'Hablar por WhatsApp',
     reply: 'Respondo en menos de 24 horas.',
     networks: 'Redes',
     resume: 'Currículum',

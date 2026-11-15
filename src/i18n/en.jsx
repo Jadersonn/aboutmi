@@ -88,7 +88,7 @@ export default {
         <strong>careers</strong> or anything else that makes sense.
       </>
     ),
-    phone: 'Phone',
+    whatsapp: 'Chat on WhatsApp',
     reply: 'I reply within 24 hours.',
     networks: 'Social',
     resume: 'Resume',

@@ -91,7 +91,7 @@ export default {
         <strong>carreira</strong> ou o que mais fizer sentido.
       </>
     ),
-    phone: 'Tel',
+    whatsapp: 'Conversar no WhatsApp',
     reply: 'Respondo em até 24 horas.',
     networks: 'Redes',
     resume: 'Currículo',

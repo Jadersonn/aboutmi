@@ -1,4 +1,4 @@
-import { site, asset } from '../data/site.js'
+import { site, asset, openWhatsApp } from '../data/site.js'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 const socials = [
@@ -24,7 +24,10 @@ export default function Contact() {
           <p className="paragraph-text justify-text">
             💌 E-mail: <a href={`mailto:${site.email}`}>{site.email}</a>
             <br />
-            📱 {t('contact.phone')}: {site.phone}
+            💬{' '}
+            <button type="button" className="link-button" onClick={openWhatsApp}>
+              {t('contact.whatsapp')}
+            </button>
             <br />
             ⏳ {t('contact.reply')}
             <br />

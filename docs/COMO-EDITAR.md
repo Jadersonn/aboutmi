@@ -23,7 +23,7 @@ Abra http://localhost:5173/aboutmi/. Cada vez que você salva um arquivo, a pág
 | Aba **Certificações** | `src/data/certificates.js` |
 | Nomes das abas | `src/data/projects.js` (lista `categories`) |
 | Barras de **Habilidades** | `src/data/skills.js` |
-| Nome, foto, e-mail, telefone, redes sociais | `src/data/site.js` |
+| Nome, foto, e-mail, WhatsApp, redes sociais | `src/data/site.js` |
 | Subtítulo do cabeçalho, textos de **Sobre**, **Contato** e resumo de **Habilidades**, currículo de cada idioma | `src/i18n/pt.jsx`, `en.jsx`, `es.jsx` |
 | Menu, títulos das seções e outros textos curtos da interface | `src/i18n/pt.jsx`, `en.jsx`, `es.jsx` |
 
