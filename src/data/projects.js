@@ -26,18 +26,104 @@ export const categories = [
 ]
 
 export const projects = [
+  // ---------- Projetos em Desenvolvimento ----------
+  {
+    title: {
+      pt: 'Sistema de Gestão para Rede de Óticas',
+      en: 'Management System for an Optical Store Chain',
+      es: 'Sistema de Gestión para una Red de Ópticas',
+    },
+    technologies: ['Django', 'HTMX', 'PostgreSQL', 'Docker'],
+    description: {
+      pt: 'Sistema interno para várias lojas de uma rede de óticas: clientes, receitas, pedidos de óculos com linha do tempo de status, pagamentos, entregas e avisos por WhatsApp. Tem login com 2FA, permissões por perfil, auditoria e LGPD (exportação e anonimização de dados). Projeto para cliente, em repositório privado.',
+      en: 'Internal system for the stores of an optical chain: customers, prescriptions, glasses orders with a status timeline, payments, deliveries and WhatsApp notifications. Includes 2FA login, role-based permissions, audit logs and LGPD compliance (data export and anonymization). Client project, private repository.',
+      es: 'Sistema interno para las tiendas de una red de ópticas: clientes, recetas, pedidos de anteojos con línea de tiempo de estado, pagos, entregas y avisos por WhatsApp. Incluye inicio de sesión con 2FA, permisos por perfil, auditoría y LGPD (exportación y anonimización de datos). Proyecto para cliente, en repositorio privado.',
+    },
+    categories: ['desenvolvimento'],
+  },
+  {
+    title: {
+      pt: 'Sistema para Consultório de Nutrição',
+      en: 'Nutrition Clinic System',
+      es: 'Sistema para Consultorio de Nutrición',
+    },
+    technologies: ['Django', 'HTMX', 'PostgreSQL', 'Docker'],
+    description: {
+      pt: 'Sistema para uma nutricionista: pacientes, agenda, consultas, pedidos de exames, receitas e planos alimentares em PDF, pagamentos e fila de mensagens no WhatsApp. Inclui um programa de 21 dias com turmas, leituras diárias e check-in de refeições. Segurança e LGPD desde o início, por lidar com dados de saúde. Projeto para cliente, em repositório privado.',
+      en: 'System for a nutritionist: patients, scheduling, appointments, lab test requests, prescriptions and meal plans as PDFs, payments and a WhatsApp message queue. Includes a 21-day program with groups, daily readings and meal check-ins. Security and LGPD compliance from day one, since it handles health data. Client project, private repository.',
+      es: 'Sistema para una nutricionista: pacientes, agenda, consultas, pedidos de exámenes, recetas y planes alimentarios en PDF, pagos y cola de mensajes de WhatsApp. Incluye un programa de 21 días con grupos, lecturas diarias y check-in de comidas. Seguridad y LGPD desde el inicio, por manejar datos de salud. Proyecto para cliente, en repositorio privado.',
+    },
+    categories: ['desenvolvimento'],
+  },
+  {
+    title: {
+      pt: 'Sites Institucionais para Pequenos Negócios',
+      en: 'Websites for Small Businesses',
+      es: 'Sitios Institucionales para Pequeños Negocios',
+    },
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    description: {
+      pt: 'Sites de página única, leves e sem dependências, para uma ótica e para uma nutricionista: vitrine de produtos e serviços, orçamento pelo WhatsApp, mapa, horário de funcionamento e foco no celular.',
+      en: 'Lightweight, dependency-free single-page websites for an optical store and a nutritionist: product and service showcase, quotes via WhatsApp, map, opening hours and a mobile-first layout.',
+      es: 'Sitios de una sola página, livianos y sin dependencias, para una óptica y una nutricionista: vitrina de productos y servicios, presupuesto por WhatsApp, mapa, horario de atención y diseño pensado para el celular.',
+    },
+    categories: ['desenvolvimento'],
+  },
+
+  // ---------- Projetos Concluídos ----------
   {
     image: 'assets/images/login-funcional.png',
     link: 'https://github.com/Jadersonn/AppCertificadosLaravel',
     title: 'AppCertificadosLaravel',
     demo: 'https://github.com/Jadersonn/AppCertificadosLaravel',
-    technologies: ['Laravel', 'PHP', 'MySQL'],
+    technologies: ['Laravel', 'PHP', 'MySQL', 'Docker'],
     description: {
-      pt: 'Aplicação web para gerar e gerenciar certificados. Feita em Laravel, permite criar, emitir e acompanhar certificados de forma eficiente.',
-      en: 'A web application for generating and managing certificates. Built with Laravel, it allows users to create, issue, and track certificates efficiently.',
-      es: 'Aplicación web para generar y gestionar certificados. Hecha con Laravel, permite crear, emitir y dar seguimiento a certificados de forma eficiente.',
+      pt: 'Sistema web para o IFMS Campus Corumbá gerenciar e emitir certificados de atividades complementares dos alunos, com áreas separadas para alunos e professores.',
+      en: 'Web system for IFMS Corumbá Campus to manage and issue certificates for students’ complementary activities, with separate areas for students and teachers.',
+      es: 'Sistema web para el IFMS Campus Corumbá que gestiona y emite certificados de actividades complementarias de los alumnos, con áreas separadas para alumnos y profesores.',
     },
     categories: ['concluidos', 'laravel'],
+  },
+  {
+    link: 'https://github.com/Jadersonn/ApiRestFuncionalidadesEssenciaisCampus',
+    title: {
+      pt: 'API REST de Funcionalidades do Campus',
+      en: 'Campus Services REST API',
+      es: 'API REST de Funcionalidades del Campus',
+    },
+    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker'],
+    description: {
+      pt: 'API REST para as funcionalidades essenciais de um campus do IFMS: cadastro de alunos, campi, cidades e situações acadêmicas, com importação de dados.',
+      en: 'REST API for the core features of an IFMS campus: students, campuses, cities and academic status records, with data import.',
+      es: 'API REST para las funcionalidades esenciales de un campus del IFMS: registro de alumnos, campus, ciudades y situaciones académicas, con importación de datos.',
+    },
+    categories: ['concluidos'],
+  },
+  {
+    link: 'https://github.com/Jadersonn/projeto-loja-de-pecas',
+    title: {
+      pt: 'Sistema para Loja de Peças',
+      en: 'Auto Parts Store System',
+      es: 'Sistema para Tienda de Repuestos',
+    },
+    technologies: ['Java', 'PHP', 'Python', 'MySQL'],
+    description: {
+      pt: 'Projeto pessoal usado como base em atividades do curso: modelagem do banco de dados no MySQL Workbench, documentação e implementações em mais de uma linguagem para uma loja de peças.',
+      en: 'Personal project used as the basis for coursework: MySQL Workbench database modeling, documentation and implementations in more than one language for an auto parts store.',
+      es: 'Proyecto personal usado como base en actividades del curso: modelado de base de datos en MySQL Workbench, documentación e implementaciones en más de un lenguaje para una tienda de repuestos.',
+    },
+    categories: ['concluidos'],
+  },
+  {
+    link: 'https://github.com/Jadersonn/flutter-crud',
+    title: { pt: 'CRUD em Flutter', en: 'Flutter CRUD App', es: 'CRUD en Flutter' },
+    technologies: ['Flutter', 'Dart'],
+    description: {
+      pt: 'Aplicativo multiplataforma de cadastro (criar, listar, editar e excluir) feito em Flutter, com versões para Android, iOS, web e desktop.',
+      en: 'Cross-platform CRUD app (create, list, edit and delete) built with Flutter, targeting Android, iOS, web and desktop.',
+      es: 'Aplicación multiplataforma de registro (crear, listar, editar y eliminar) hecha en Flutter, con versiones para Android, iOS, web y escritorio.',
+    },
+    categories: ['concluidos'],
   },
   ...ideaCards,
   ...studyCards,
