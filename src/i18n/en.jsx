@@ -88,6 +88,12 @@ export default {
         <strong>careers</strong> or anything else that makes sense.
       </>
     ),
+    hobby: (
+      <>
+        💡 I also build software <strong>as a hobby</strong>: websites, systems and automations for small businesses
+        and personal projects, at a <strong>below-market price</strong>. If you have an idea, get in touch.
+      </>
+    ),
     whatsapp: 'Chat on WhatsApp',
     reply: 'I reply within 24 hours.',
     networks: 'Social',

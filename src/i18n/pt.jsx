@@ -91,6 +91,13 @@ export default {
         <strong>carreira</strong> ou o que mais fizer sentido.
       </>
     ),
+    hobby: (
+      <>
+        💡 Também desenvolvo <strong>por hobby</strong>: sites, sistemas e automações para pequenos negócios e
+        projetos pessoais, cobrando um <strong>valor abaixo do mercado</strong>. Se você tem uma ideia, me chame para
+        conversar.
+      </>
+    ),
     whatsapp: 'Conversar no WhatsApp',
     reply: 'Respondo em até 24 horas.',
     networks: 'Redes',

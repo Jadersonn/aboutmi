@@ -21,6 +21,8 @@ export default function Contact() {
 
           <p className="paragraph-text justify-text">{t('contact.intro')}</p>
 
+          <p className="paragraph-text justify-text">{t('contact.hobby')}</p>
+
           <p className="paragraph-text justify-text">
             💌 E-mail: <a href={`mailto:${site.email}`}>{site.email}</a>
             <br />
