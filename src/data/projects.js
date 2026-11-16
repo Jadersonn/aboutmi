@@ -84,47 +84,6 @@ export const projects = [
     },
     categories: ['concluidos', 'laravel'],
   },
-  {
-    link: 'https://github.com/Jadersonn/ApiRestFuncionalidadesEssenciaisCampus',
-    title: {
-      pt: 'API REST de Funcionalidades do Campus',
-      en: 'Campus Services REST API',
-      es: 'API REST de Funcionalidades del Campus',
-    },
-    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Docker'],
-    description: {
-      pt: 'API REST para as funcionalidades essenciais de um campus do IFMS: cadastro de alunos, campi, cidades e situações acadêmicas, com importação de dados.',
-      en: 'REST API for the core features of an IFMS campus: students, campuses, cities and academic status records, with data import.',
-      es: 'API REST para las funcionalidades esenciales de un campus del IFMS: registro de alumnos, campus, ciudades y situaciones académicas, con importación de datos.',
-    },
-    categories: ['concluidos'],
-  },
-  {
-    link: 'https://github.com/Jadersonn/projeto-loja-de-pecas',
-    title: {
-      pt: 'Sistema para Loja de Peças',
-      en: 'Auto Parts Store System',
-      es: 'Sistema para Tienda de Repuestos',
-    },
-    technologies: ['Java', 'PHP', 'Python', 'MySQL'],
-    description: {
-      pt: 'Projeto pessoal usado como base em atividades do curso: modelagem do banco de dados no MySQL Workbench, documentação e implementações em mais de uma linguagem para uma loja de peças.',
-      en: 'Personal project used as the basis for coursework: MySQL Workbench database modeling, documentation and implementations in more than one language for an auto parts store.',
-      es: 'Proyecto personal usado como base en actividades del curso: modelado de base de datos en MySQL Workbench, documentación e implementaciones en más de un lenguaje para una tienda de repuestos.',
-    },
-    categories: ['concluidos'],
-  },
-  {
-    link: 'https://github.com/Jadersonn/flutter-crud',
-    title: { pt: 'CRUD em Flutter', en: 'Flutter CRUD App', es: 'CRUD en Flutter' },
-    technologies: ['Flutter', 'Dart'],
-    description: {
-      pt: 'Aplicativo multiplataforma de cadastro (criar, listar, editar e excluir) feito em Flutter, com versões para Android, iOS, web e desktop.',
-      en: 'Cross-platform CRUD app (create, list, edit and delete) built with Flutter, targeting Android, iOS, web and desktop.',
-      es: 'Aplicación multiplataforma de registro (crear, listar, editar y eliminar) hecha en Flutter, con versiones para Android, iOS, web y escritorio.',
-    },
-    categories: ['concluidos'],
-  },
   ...ideaCards,
   ...studyCards,
   ...certificateCards,
